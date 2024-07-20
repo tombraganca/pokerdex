@@ -1,27 +1,51 @@
 # Pokerdex
+Segue o teste para ser realizado:
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.1.
+Para conhecermos um pouco mais do seu lado técnico, gostaríamos de propor um desafio, no qual não existe resposta certa ou errada, mas permitirá mostrar mais o seu jeito de desenvolver. 
+ 
+A ideia é bem simples e o desafio também, gostaríamos de uma aplicação que consulte a api de pokemon TCG (https://docs.pokemontcg.io/#api_v1cards_list) e que nossos jogadores pudessem montar um baralho em cima dela. 
+ 
+O projeto deve ser feito usando o Angular 16+, Tailwind e a biblioteca UI Infragistics, só que temos alguns requisitos obrigatórios:
 
-## Development server
+Lista de baralhos
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+O usuário pode ver seus baralhos;  
+O usuário pode criar um novo baralho;  
+O usuário pode remover um baralho;  
+O usuário pode editar um baralho;  
+O usuário pode clicar num baralho para visualizar seus detalhes.  
 
-## Code scaffolding
+## Criação de um baralho
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+O usuário pode colocar um nome no seu baralho;
+O usuário pode inserir cartas no baralho;
+O baralho tem que ter no mínimo 24 cartas e no máximo 60;
+Só podem ter 4 cartas com o mesmo nome, no baralho. (Nome não id);
+Após salvar o baralho voltamos para a página de lista de baralhos atualizada;
+O baralho será salvo apenas em memória.
 
-## Build
+## Detalhes do baralho
+O usuário consegue ver quantos pokemons e cartas de treinador existem no baralho. (atributo supertype)
+O usuário consegue ver de quantas cores é o baralho, quantos types únicos existem no baralho.
+ 
+Quanto a interface, vamos deixar a sua criatividade falar mais alto, capriche nas suas ideias, nos surpreenda.
+ 
+Disponibilize o seu código no github ou bitbucket, não deixe de detalhar no readme do projeto, qual arquitetura, funcionalidades e ambiente de desenvolvimento utilizou.
+ 
+Pedimos que nos envie para um Code Review em até 1 semana.
+Aguardamos seu retorno e caso tenha algum problema ou dúvida nos avise.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Muito obrigada 🤞🏻☺
 
-## Running unit tests
+## Dicas importantes para a realização do teste:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Tivemos candidatos que plagiaram rs 🙄 E plagiaram uma linha de código apenas, e eles barraram, estão bem críticos com isso (sei que não vai fazer isso rs, mas só um aviso).  
+[ ] - Utilizar novas diretivas do Angular  '@if" (angular v17);  
+[ ] - Possui virtualização;  
+[ ] - Não deixar o componente vazio;    
+[ ] - Utilizar Standalone;   
+[ ] - Utilizar Signals;  
+[ ] - Utilizar Infragistics;  
+[ ] - Deixar a navegação leve, sem ser muito pesada;  
+[ ] - Não utilizar um filtro para adicionar cartas no deck, pois pode acabar prejudicando a usabilidade;  
+Focar na persistência dos dados.
