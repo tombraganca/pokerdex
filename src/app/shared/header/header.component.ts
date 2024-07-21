@@ -1,5 +1,5 @@
 import { AsyncPipe } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -13,4 +13,5 @@ import { RouterLink } from '@angular/router';
   imports: [MatToolbarModule, MatButtonModule, RouterLink, MatIconModule, AsyncPipe]
 })
 export class HeaderComponent {
+  @Output() toggleSidenav = new EventEmitter<void>();
 }

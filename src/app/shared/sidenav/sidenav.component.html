@@ -1,0 +1,23 @@
+<div class="w-full" [class.is-mobile]="mobileQuery.matches">
+  <app-header (toggleSidenav)="snav.toggle()"></app-header>
+
+  <mat-sidenav-container>
+    <mat-sidenav
+      #snav
+      [mode]="mobileQuery.matches ? 'over' : 'side'"
+      [fixedInViewport]="mobileQuery.matches"
+    >
+      <mat-nav-list>
+        @for (nav of sideNavOptions; track nav) {
+        <a mat-list-item [href]="nav.route">{{ nav.name }}</a>
+        }
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      @for (content of fillerContent; track content) {
+      <p>{{ content }}</p>
+      }
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
