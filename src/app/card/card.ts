@@ -1,4 +1,4 @@
-export interface Card {
+export interface Pokemon {
   id: string;
   name: string;
   supertype: string;

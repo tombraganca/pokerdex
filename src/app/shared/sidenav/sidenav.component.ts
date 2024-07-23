@@ -11,7 +11,6 @@ import { HeaderComponent } from '../header/header.component';
 @Component({
   selector: 'app-sidenav',
   templateUrl: 'sidenav.component.html',
-  styleUrl: 'sidenav.component.scss',
   standalone: true,
   imports: [
     MatToolbarModule,
